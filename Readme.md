@@ -37,7 +37,8 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
 
 #### Antwort
 ``` Status: 200 OK ```
-``` {
+```json
+{
   "todos": [
     {
       "title": "Schlafen",
@@ -56,29 +57,49 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
       "ready": false
     }
   ]
-} ```
+}
+```
 
 ### Neues Todo erstellen
 ``` POST /new_todo ```
 > Erstellt ein neues Todo und fügt es der Todos-Liste hinzu.
 
 #### Anfrage
-``` {"title": "Neues Todo","ready": false} ```
+```json
+{
+    "title": "Neues Todo",
+    "ready": false
+} 
+```
 
 #### Antwort
 ``` Status: 200 OK ```
-``` {"message": "success"} ```
+```json 
+{
+    "message": "success"
+} 
+```
 
 ### Ein Todo aktualisieren
 ``` PUT /todos/:index ```
 > Aktualisiert das Todo anhand des angegebenen Index.
 
 #### Anfrage
-``` {"title": "Aktualisiertes Todo","ready": true} ```
+```json 
+{
+    "title": "Aktualisiertes Todo",
+    "ready": true
+} 
+```
 
 #### Antwort
 ``` Status: 200 OK ```
-``` {"title": "Aktualisiertes Todo","ready": true} ```
+```json 
+{
+    "title": "Aktualisiertes Todo",
+    "ready": true
+    } 
+```
 
 ### Ein Todo löschen
 ``` DELETE /todos/:index ```
@@ -86,4 +107,8 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
 
 #### Antwort
 ``` Status: 200 OK ```
-``` {"title": "Gelöschtes Todo","ready": false} ```
+```json 
+{
+    "title": "Gelöschtes Todo","ready": false
+}
+```
