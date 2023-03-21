@@ -98,7 +98,7 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
 {
     "title": "Aktualisiertes Todo",
     "ready": true
-    } 
+} 
 ```
 
 ### Ein Todo löschen
@@ -109,6 +109,7 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
 ``` Status: 200 OK ```
 ```json 
 {
-    "title": "Gelöschtes Todo","ready": false
+    "title": "Gelöschtes Todo",
+    "ready": false
 }
 ```
