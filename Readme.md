@@ -33,15 +33,34 @@ Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
 
 ### Erhalte Initial-Todos
 ``` GET /initial_todos ```
-Gibt ein JSON-Objekt zurück, das ein Array von Initial-Todos enthält.
+> Gibt ein JSON-Objekt zurück, das ein Array von Initial-Todos enthält.
 
 #### Antwort
 ``` Status: 200 OK ```
-``` {"todos": [{"title": "Schlafen","ready": false},{"title": "Programmieren","ready": false},{"title": "Essen","ready": true},{"title": "Wiederholen","ready": false}]} ```
+``` {
+  "todos": [
+    {
+      "title": "Schlafen",
+      "ready": false
+    },
+    {
+      "title": "Programmieren",
+      "ready": false
+    },
+    {
+      "title": "Essen",
+      "ready": true
+    },
+    {
+      "title": "Wiederholen",
+      "ready": false
+    }
+  ]
+} ```
 
 ### Neues Todo erstellen
 ``` POST /new_todo ```
-Erstellt ein neues Todo und fügt es der Todos-Liste hinzu.
+> Erstellt ein neues Todo und fügt es der Todos-Liste hinzu.
 
 #### Anfrage
 ``` {"title": "Neues Todo","ready": false} ```
@@ -52,7 +71,7 @@ Erstellt ein neues Todo und fügt es der Todos-Liste hinzu.
 
 ### Ein Todo aktualisieren
 ``` PUT /todos/:index ```
-Aktualisiert das Todo anhand des angegebenen Index.
+> Aktualisiert das Todo anhand des angegebenen Index.
 
 #### Anfrage
 ``` {"title": "Aktualisiertes Todo","ready": true} ```
@@ -63,7 +82,7 @@ Aktualisiert das Todo anhand des angegebenen Index.
 
 ### Ein Todo löschen
 ``` DELETE /todos/:index ```
-Löscht das Todo anhand des angegebenen Index.
+> Löscht das Todo anhand des angegebenen Index.
 
 #### Antwort
 ``` Status: 200 OK ```
