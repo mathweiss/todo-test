@@ -25,3 +25,46 @@ Folgende Schritte sind für die Installation des APIs notwendig:
 Im API sind bereits die erforderlichen Endpunkte für das Hinzufügen, Ändern, Löschen und Abrufen der ursprünglichen To-Do-Liste vorhanden.
 
 Du hast 30 Minuten, um die Aufgabe zu erledigen. Viel Glück.
+
+## Todo-API-Dokumentation
+
+### Basis-URL
+``` http://localhost:8000/ ```
+
+### Erhalte Initial-Todos
+``` GET /initial_todos ```
+Gibt ein JSON-Objekt zurück, das ein Array von Initial-Todos enthält.
+
+#### Antwort
+``` Status: 200 OK ```
+``` {"todos": [{"title": "Schlafen","ready": false},{"title": "Programmieren","ready": false},{"title": "Essen","ready": true},{"title": "Wiederholen","ready": false}]} ```
+
+### Neues Todo erstellen
+``` POST /new_todo ```
+Erstellt ein neues Todo und fügt es der Todos-Liste hinzu.
+
+#### Anfrage
+``` {"title": "Neues Todo","ready": false} ```
+
+#### Antwort
+``` Status: 200 OK ```
+``` {"message": "success"} ```
+
+### Ein Todo aktualisieren
+``` PUT /todos/:index ```
+Aktualisiert das Todo anhand des angegebenen Index.
+
+#### Anfrage
+``` {"title": "Aktualisiertes Todo","ready": true} ```
+
+#### Antwort
+``` Status: 200 OK ```
+``` {"title": "Aktualisiertes Todo","ready": true} ```
+
+### Ein Todo löschen
+``` DELETE /todos/:index ```
+Löscht das Todo anhand des angegebenen Index.
+
+#### Antwort
+``` Status: 200 OK ```
+``` {"title": "Gelöschtes Todo","ready": false} ```
